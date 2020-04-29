@@ -1,0 +1,172 @@
+.container{max-width: 100%; padding: 0px;}
+.midcard{
+    margin: 2rem 10rem;
+}
+
+.card {
+    text-align: center;
+    border: 0px;
+}
+h5.card-title {
+    background: -webkit-linear-gradient(left,#4c9bd3, #05b68b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size:24px;
+    font-weight: bold;
+}
+.row {
+    margin: 8rem 0rem;
+}
+
+button.btn.btn-primary.onchageimage{
+    background: #fafafa;
+    box-shadow: 0px 10px 10px #edfaf8;
+    color: #1cada1;
+    padding: 3rem 3rem;
+    border-radius: 1rem;
+    border: 1px solid #fff;
+    font-weight: bold;
+    margin-bottom: 4.5rem;
+    width: 100%;
+}
+
+.row.iphonesec {
+    text-align: center;
+    margin-bottom: 0rem;
+}
+
+.icon_box{
+    border-radius: 2rem;
+    border: 2px solid #1aae9f;
+    padding: 2rem 0rem;
+    padding-bottom: 0;
+}
+
+.doctoreinfo{
+    background-image: url("/assets/images/drbackground.png");
+    background-repeat: no-repeat;
+    height:1246px;
+    margin-bottom: 2rem;
+    Padding-top: 4rem;
+}
+
+h1 {
+    background: -webkit-linear-gradient(left,#4c9bd3, #21aba7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size:24px;
+    font-weight: 700;
+}
+
+.ownerData{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.list-group-item {
+    position: relative;
+    display: block;
+    padding: .5rem 1.25rem;
+    background-color: transparent;
+    border: none;
+}
+
+i.fa.fa-lock {
+    color: #2da7b3;
+    font-size: 14px;
+    margin-right: .5rem;
+}
+
+
+.card-header{
+    background: #fafafa;
+    box-shadow: 0px 10px 10px #edfaf8;
+    color: #1cada1 !important;
+    padding: .5rem;
+    border-radius: 1rem;
+    border: 1px solid #fff;
+    font-weight: bold;
+    margin-bottom: 9.5rem;
+    width: 100%;
+}
+
+.mobile_device{
+    display: none;
+}
+
+
+.mobileScreenadjust{
+    margin-top:20rem;
+}
+
+
+@media screen and (max-width: 767px) {
+    .mobileScreenadjust{
+        margin-top:0rem;
+    }
+    .midcard{
+        margin: .5rem .5rem;
+    }
+
+    .row{
+        margin: 0rem 0rem;
+    }
+
+    h1{
+        margin-top:0px;
+    }
+
+    button.btn.btn-primary.onchageimage {
+        margin-bottom: 1.5rem !important;
+    }
+
+    .icon_box {
+        margin-top: 2rem;
+    }
+
+    .accordion>.card>.card-header {
+        border-radius: 2rem;
+        margin-bottom: 2rem;
+        border: 3px solid #fff;
+    }
+    
+    h2.mb-0 {
+        margin-top: 0;
+        line-height: 0rem !important;
+    }
+    
+    .btn-link {
+        font-weight: 600;
+        color: #1cada1;
+        text-decoration: none;
+    }
+
+    .mobile_device{
+        display: inline !important;
+    }
+
+    .iphonesec{
+        display: none;
+    }
+
+    .doctoreinfo{
+        background-image: url("/assets/images/mobiledrbackground.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        margin: 1.5rem 0rem;
+        padding-top: 46rem;
+        height: 0;
+    }
+
+    h1{
+        font-size: 32px !important;
+        font-weight: 700;
+        line-height: 2.5rem;
+    }
+
+    .ownerData{
+        width: 90%;
+        display: none;
+    }
+}

@@ -1,0 +1,168 @@
+.container-fluid{
+    position: relative;
+    width:100%;
+}
+
+.container_desk{
+    padding-left: 0px; 
+    padding-right: 9%;
+}
+
+
+.container_deskleft{
+    padding-left:9%;
+}
+
+.divpositon_left{
+    width: 60%;
+}
+
+.divpositonleft{
+    padding:0px !important;
+}
+
+@media screen and (max-width: 767px) {
+.divpositon {
+    position: absolute;
+    bottom: 100%;
+    width: 70%;
+    right: 0;
+}
+
+.container_desk{
+    margin-bottom: 7rem;
+}
+
+
+
+.container_deskleft{
+    padding-left:0px;
+    margin-bottom: 7rem;
+}
+
+.divpositon_left{
+    position: absolute;
+    bottom: 100%;
+    width: 60%;
+    left: 0;
+}
+
+}
+
+.container{max-width: 100%; padding: 0px;}
+
+.coronabanner{
+    width:100%;
+    background-image: none;
+    background: -webkit-gradient(linear, left bottom, left top, from(rgb(5, 182, 138)), color-stop(99%, rgb(59, 162, 193)), to(rgb(59, 162, 193)));
+	background: linear-gradient(to top, rgb(5, 182, 138) 0%, rgb(59, 162, 193) 99%, rgb(59, 162, 193) 100%);
+	margin-top: 5.5rem;
+	
+}
+
+.bnner_container{
+    max-width: 560px;
+    margin:0 auto;
+}
+.divpositon {
+    margin-top: 10rem;
+}
+
+
+@media only screen and (max-device-width: 1283px) {
+    a.nav-link {
+		margin-left: 0px !important;
+	}
+
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1023px) {
+	.logo {
+		width: 8%;
+	}
+	a.nav-link {
+		margin-left: 0px !important;
+		line-height: 16px;
+		font-size: 12px;
+    }
+    
+	.nav-pills .nav-link {
+		border-radius: 0rem;
+	}
+	.nav-pills .nav-link.active,
+	.nav-pills .show .nav-link {
+		background-color: none !important;
+	}
+	.nav-pills .nav-link.active,
+	.nav-pills .show>.nav-link {
+		background-image: none;
+		background: none !important
+	}
+	.nav-item {
+		width: 100%;
+	}
+	.nav-pills .nav-link.active,
+	.nav-pills .show>.nav-link {
+		color: #328dcc;
+	}
+	.nav-link {
+		padding: 0.5rem 0rem !important;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.logo {
+		width: 16%;
+	}
+	a.nav-link {
+		margin-left: 0px !important;
+		line-height: 16px;
+		font-size: 12px;
+	}
+	.nav-pills .nav-link {
+		border-radius: 0rem;
+	}
+	.nav-pills .nav-link.active,
+	.nav-pills .show .nav-link {
+		background-color: none !important;
+	}
+	.nav-pills .nav-link.active,
+	.nav-pills .show>.nav-link {
+		background-image: none;
+		background: none !important
+	}
+	.nav-item {
+		width: 100%;
+	}
+	.nav-pills .nav-link.active,
+	.nav-pills .show>.nav-link {
+		color: #328dcc;
+	}
+	.nav-link {
+		padding: 0.5rem 0rem !important;
+	}
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1283px){
+	.coronabanner{
+		margin-top:4rem;
+	}
+
+}
+
+@media screen and (max-width: 767px){
+
+	.coronabanner{
+		margin-top:4rem;
+	}
+
+
+    .bnner_container {
+        max-width: 310px;
+        margin: 0 auto;
+        padding-left: .5rem;
+        padding-right: .5rem;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+}

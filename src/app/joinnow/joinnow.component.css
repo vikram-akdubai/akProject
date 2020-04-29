@@ -1,0 +1,36 @@
+.container{max-width: 100%; padding: 0px; margin-top: 5rem;}
+.row{
+    margin:0px;
+}
+.btn-change{
+    height: 70px;
+    width: 60%;
+    margin: 20px 0px;
+    box-shadow: 0 0 1px #ccc;
+    -webkit-transition: all 0.5s ease-in-out;
+    border: 2px solid #07b58c;
+    color: rgb(5, 182, 138);
+    border-radius: 15px;
+    text-transform: uppercase;
+    padding: 2%;
+    font-size: 20px;
+    background-color: #ffff;
+    font-weight: 500;
+}
+
+.btn-change:hover{
+    -webkit-transform: scale(1.1);
+    color: #fff;
+	background-image: none;
+	background: -webkit-linear-gradient(right, rgb(5, 182, 138) 0%, rgb(59, 162, 193) 99%, rgb(59, 162, 193) 100%);
+	background: -o-linear-gradient(right, rgb(5, 182, 138) 0%, rgb(59, 162, 193) 99%, rgb(59, 162, 193) 100%);
+	background: -ms-linear-gradient(right, rgb(5, 182, 138) 0%, rgb(59, 162, 193) 99%, rgb(59, 162, 193) 100%);
+	background: -moz-linear-gradient(right, rgb(5, 182, 138) 0%, rgb(59, 162, 193) 99%, rgb(59, 162, 193) 100%);
+    background: linear-gradient(to left, rgb(5, 182, 138) 0%, rgb(59, 162, 193) 99%, rgb(59, 162, 193) 100%);
+    border:0px;
+}
+
+.reg_buttons{
+    margin: 6rem 0rem;
+}
+

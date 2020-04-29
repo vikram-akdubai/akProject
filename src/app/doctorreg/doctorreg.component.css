@@ -1,0 +1,220 @@
+.container{max-width: 100%; padding: 0px; margin-top: 5rem;}
+.row{
+    margin:0px;
+}
+.btn-change{
+    height: 70px;
+    width: 60%;
+    margin: 20px 0px;
+    box-shadow: 0 0 1px #ccc;
+    -webkit-transition: all 0.5s ease-in-out;
+    border: 2px solid #07b58c;
+    color: rgb(5, 182, 138);
+    border-radius: 15px;
+    text-transform: uppercase;
+    padding: 2%;
+    font-size: 20px;
+    background-color: #ffff;
+    font-weight: 500;
+}
+
+.btn-change:hover{
+    -webkit-transform: scale(1.1);
+    color: #fff;
+	background-image: none;
+	background: -webkit-linear-gradient(right, rgb(5, 182, 138) 0%, rgb(59, 162, 193) 99%, rgb(59, 162, 193) 100%);
+	background: -o-linear-gradient(right, rgb(5, 182, 138) 0%, rgb(59, 162, 193) 99%, rgb(59, 162, 193) 100%);
+	background: -ms-linear-gradient(right, rgb(5, 182, 138) 0%, rgb(59, 162, 193) 99%, rgb(59, 162, 193) 100%);
+	background: -moz-linear-gradient(right, rgb(5, 182, 138) 0%, rgb(59, 162, 193) 99%, rgb(59, 162, 193) 100%);
+    background: linear-gradient(to left, rgb(5, 182, 138) 0%, rgb(59, 162, 193) 99%, rgb(59, 162, 193) 100%);
+    border:0px;
+}
+
+.reg_buttons{
+    margin: 6rem 0rem;
+}
+
+.active .bs-stepper-circle {
+    background-image: none;
+    background: linear-gradient(0deg,#05b68a 0,#3ba2c1 99%,#3ba2c1);
+    color: #fff;
+}
+
+.bs-stepper-circle {
+    border: 2px solid #16b09c;
+    background: #fff;
+    color: #16b09c;
+    line-height: .7em;
+}
+
+.bs-stepper .step-trigger {
+    font-weight: normal;
+    color: #16b09c;
+}
+
+.form-group {
+  display: flex; }
+  .form-group input {
+    width: 50%; }
+    .form-group input:first-child {
+      margin-right: 25px; }
+
+.form-wrapper {
+  position: relative; 
+  margin-bottom: 1.5rem;
+}
+  .form-wrapper i {
+    position: absolute;
+    bottom: 4px;
+    right: 0; }
+
+.form-control {
+  border: 1px solid #16b09c;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  display: block;
+  width: 100%;
+  height: 30px;
+  padding: 0;
+  color: #cacaca;
+  border-radius: 0px;
+}
+  .form-control::-webkit-input-placeholder {
+    color: #cacaca;}
+  .form-control::-moz-placeholder {
+    color: #cacaca; }
+  .form-control:-ms-input-placeholder {
+    color: #cacaca; }
+  .form-control:-moz-placeholder {
+    color: #cacaca; }
+
+.checkmark {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 12px;
+    width: 13px;
+    border-radius: 2px;
+    background-color: #ebebeb;
+    color: #000;
+    font-size: 10px;
+    font-weight: bolder;
+}
+
+.checkbox a {
+    font-size: 13px;
+    color: #16b09c;
+    line-height: -7px;
+    text-decoration: none;
+}
+
+.toggle{
+  float: left !important;
+}
+
+.email_sec {
+  width: 100%;
+  position: fixed;
+  /* margin-bottom: 20%; */
+  MARGIN: 0 AUTO;
+}
+
+.btn{
+  float: right;
+  padding: 2% 6%;
+  border-radius: 1rem;
+}
+
+.otpbtn{
+  padding: .5rem 2rem;
+}
+
+.toggle {
+  cursor: pointer;
+  padding: 3% 6% !important;
+  border-radius: 1rem;
+  margin-right: 2rem;
+}
+
+.email_sec .btn:active{
+  border: 5px solid #000;
+}
+
+.modal-header{
+  border: none;
+}
+
+.modal-footer {
+  border: none;
+}
+
+
+
+#stepper1 {
+    width: 85%;
+}
+
+.card .form-group .form-control {
+  width: 9% !important;
+  margin-right: 2rem;
+  text-align: center;
+  border-radius: 0px;
+  font-size: 20px;
+}
+
+button.close {
+  opacity: 1;
+}
+
+.card {
+  border: 0;
+  padding: 0px !important;
+}
+
+.modal-content {
+  padding: 2%;
+}
+
+.formselect{
+border: 1px solid #16b09c;
+width: 15%;
+border-radius: .8rem;
+padding-left: .4rem;
+}
+
+.bs-stepper-header {
+    margin-bottom: 2rem;
+}
+
+.bs-stepper-content {
+    padding: 0;
+}
+
+.btn-outline-secondary {
+  border-color: #ffffff !important;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  color: #fff;
+  background-image: none;
+  background: linear-gradient(to top, rgb(5, 182, 138) 0%, rgb(59, 162, 193) 99%, rgb(59, 162, 193) 100%);
+  border: none !important;
+  padding: .6rem 1.5rem;
+  margin-right: 2rem;
+}
+
+.nav-pills .nav-link {
+  border-radius: 1rem;
+  border: 2px solid #13b199;
+  color: #13b199;
+  padding: .5rem 1.5rem;
+  margin-right: 2rem;
+}
+
+@media (min-width: 576px){
+.modal-dialog {
+    max-width: 530px;
+}
+}

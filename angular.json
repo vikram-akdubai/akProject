@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "artelir-app": {
@@ -24,7 +24,11 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "node_modules/minireset.css/minireset.css",
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./node_modules/ngx-bootstrap/datepicker/bs-datepicker.css",
+              "src/styles.css",
+              "node_modules/igniteui-angular/styles/igniteui-angular.css"
             ],
             "scripts": []
           },
@@ -88,7 +92,13 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./node_modules/ngx-bootstrap/datepicker/bs-datepicker.css",
+              "./node_modules/intl-tel-input/build/css/intlTelInput.css",
+              "src/styles.css",
+              "node_modules/igniteui-angular/styles/igniteui-angular.css",
+              "src/styles-app-loading.scss",
+              "src/styles.scss"
             ],
             "scripts": []
           }
@@ -119,6 +129,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "artelir-app"
+    }
+  },
+  "defaultProject": "artelir-app",
+  "cli": {
+    "analytics": "e4d71629-4351-4732-94fe-913fe7045814"
+  }
 }
