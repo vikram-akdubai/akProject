@@ -1,8 +1,19 @@
 .container{max-width: 100%; padding: 0px 6%; margin-top: 5rem;}
 
+.clear{
+    clear: both;
+}
+
 .media-body {
     vertical-align: middle;
     align-self: center;
+}
+
+.bs-stepper-circle .Success{
+    border: 2px solid #16b09c;
+    background: #16b09c;
+    color: #fff;
+    line-height: .7em;
 }
 
 .personal_text h3 {
@@ -14,21 +25,36 @@
     -webkit-text-fill-color: transparent;
 }
 
-.personal_text {
-    padding-top: 4%;
+.dayBox {
+    width: 25%;
+    margin-right: 0 !important;
 }
+
+h6{
+    background: -webkit-linear-gradient(#07b58c, #489dce);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: 100%;
+    float: left;
+}
+.parent{display: inline-block; position: relative; margin-left:1rem;}
+.figure {background-color: #fff; }
 
 .list {
     list-style: none;
     margin: 0px;
-    padding: 0px;
+    width: 100%;
+    margin-bottom: 4rem;
+}
+
+.boxHead{
+    margin-bottom: 0;
 }
 
 .personal_text .basic_info li {
-    margin-bottom: 1%;
     float: left;
-    margin-right: 15%;
-    margin-top: 3%;
+    margin-right: 10%;
+    margin-top: 0%;
 }
 .personal_text .basic_info li a {
     position: relative;
@@ -36,6 +62,8 @@
     font-size: 16px;
     color: #777777;
 }
+
+
 
 .personal_text .basic_info li a i {
     position: absolute;
@@ -46,16 +74,32 @@
     color: #766dff;
 }
 
+.personal_text .clinicInfoDetails li {
+    float: left;
+    width: 50%;
+    margin-bottom: 1rem;
+}
+
 .gradstrip {
-    margin: 3rem 0rem;
-    border-bottom: 10px solid;
-    border-image: radial-gradient(#41a0c7, #06b68b) 1;
-    padding:0;
+    margin: 2rem 0rem;
+    border-bottom: 10px solid #06b68b;
+    padding: 1rem 0rem;
+}
+
+.mat-stepper-horizontal-line {
+    border-top-width: 1px;
+    border-top-style: solid;
+    flex: auto;
+    height: 0;
+    margin: 0px -16px;
+    min-width: 16rem;
+    border-top-color: #e6e6e6;
+    margin-right: .5rem;
 }
 
 .bs-stepper .step-trigger{
     cursor: pointer;
-    margin-right: 7.5rem;
+    margin-right: 1.5rem;
     padding-left: 0;
     padding-right: 0;
 }
@@ -95,7 +139,7 @@
     margin: 6rem 0rem;
 }
 
-.active .bs-stepper-circle {
+.activebs-stepper-circle {
     background-image: none;
     background: linear-gradient(0deg,#05b68a 0,#3ba2c1 99%,#3ba2c1);
     color: #fff;
@@ -120,8 +164,17 @@
 }
 
 .docprofileabout {
-    box-shadow: 0px 2px 14px 8px #d6d6d6;
     border-radius: 1rem;
+}
+
+.basic_info_header li{
+        float: left;
+        width: 50%;
+        margin-top: 0%;
+}
+
+.joinnowContainer{
+border: 1px solid #e6e6e6;
 }
 
 .regiscertificate span{
@@ -205,6 +258,7 @@ i.fas.fa-calendar-alt.fa-fw {
 
 p.card-text {
     margin-bottom: 0rem !important;
+    cursor: pointer;
 }
 
 .avatar-upload {
@@ -277,6 +331,7 @@ p.card-text {
       overflow: hidden;
       border: 5px solid #1aae9f;
       padding: .5rem;
+      margin:0 auto;
   
   }
   
@@ -307,6 +362,7 @@ button.btn.btn-primary.profileButton:hover {
 .modal-title{
     font-size: 1rem;
     color: #1aae9f;
+    margin-top: 0px;
 }
 
 .selected-list .c-list .c-token {
@@ -470,8 +526,39 @@ input[type='checkbox']:checked:after {
     margin-top: -7rem;
 }
 
-.dayLight{
-    padding-left: 5rem !important;
+.nav-link {
+    display: block;
+    padding: 1rem 1rem;
+}
+
+a.nav-link.text-dark:hover {
+    background: #f8f9fa;
+    color: #16b09c !important;
+}
+
+a.nav-link.text-dark.bg-light {
+    color: #16b09c !important;
+}
+
+/*a.nav-link.text-dark:visited {
+    background: #f8f9fa;
+}*/
+
+.text-dark {
+    color: #c6c6c6!important;
+}
+
+label{
+    width:10%;
+    width: 60%;
+}
+
+.clinicInfoDetails{
+    margin-bottom: 0rem;
+}
+
+agm-map {
+    height: 300px;
 }
 
   @media (min-width: 576px){
@@ -483,4 +570,267 @@ input[type='checkbox']:checked:after {
 
 
 
+  a {
+    color: #2c3e50;
+    transition: color 0.2s ease-out;
+    padding: 5px 10px;
+    margin-right: 16px;
+    background:#fff;
+    border-radius:5px;
+    text-decoration:none;  
+  }
+  
+  .wrapper {
+    border: 1px dashed #95a5a6;
+    margin-top: 16px;
+    border-radius: 4px;
+    position: relative;
+    font-size: 12px;
+    background:#000;
+  }
+  
+  .wrapper p {
+    font-size:20px;
+  }
 
+  .calenderScheduled{
+    border: 1px solid #e6e6e6;
+    text-align: center;
+    padding: 6rem 30rem;
+    BORDER-RADIUS: 2rem;
+    margin: 2rem 2rem;;
+}
+
+.appointmentList{
+    border:1px solid #e6e6e6;
+    padding: 1rem 0rem;
+    border-radius:2rem;
+    margin-bottom: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.list_appoint li {
+    float: left;
+    margin-right: 25%;
+}
+
+/*.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+    color: #424242;
+    background-color: #fff;
+    box-shadow: 1px 2px 15px #e6e6e6;
+    padding: 1rem 4rem;
+    border-radius: 1rem;
+    margin-right: 4rem;
+}*/
+
+.appointmentButtoms{
+    margin-top:2rem;
+}
+
+.list_view li {
+    float: left;
+    /* margin-right: 39%; */
+    width: 49%;
+    margin: .5rem 0rem;
+}
+
+.appointmentviewList{
+    padding: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    padding-top: 0;
+}
+
+.viewlist{
+    border: 1px solid #e6e6e6 !important;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin-top: .5rem;
+    margin-bottom: 1.5rem;
+    height: 150px;
+}
+
+.imageShow {
+    padding: 1.5rem;
+    border: 1px solid #e6e6e6;
+    border-radius: 1rem;
+    margin-right: 1rem;
+    margin-top: .5rem;
+    margin-bottom: 1rem;
+}
+
+.clinicListView{
+    border: 2px solid #e6e6e6;
+    border-radius: 2rem;
+    margin-bottom: 2rem;
+}
+
+.clinicListView:hover{
+    border: 2px solid #07b68c;
+}
+
+.clinicListView:active{
+    border: 2px solid #07b68c;
+}
+
+select.form-control.reasonDrop {
+    border: 1px solid #07b68c !important;
+    border-radius: 1rem;
+    color: #d6d6d6;
+}
+
+.setupBank{
+    padding: 1rem 14rem;
+    color: #424242;
+    background-color: #fff;
+    box-shadow: 1px 2px 15px #e6e6e6;
+    border-radius: 1rem;    
+}
+
+.priceSection {
+    padding: 2rem;
+    border: 1px solid #e6e6e6;
+    border-radius: 1rem;
+    color: #07b68c;
+}
+
+.priceSection span{
+    font-weight: bold;
+    color: #000;
+}
+
+.insuranceClose{
+    Width: 100% !important;
+    color: #07b68c !important;
+    background-color: #fff !important;
+    box-shadow: 1px 2px 15px #e6e6e6 !important;
+    border-radius: 1rem !important;
+    border: 1px solid #fff !important;
+}
+
+.currencyDrop{
+    border: 1px solid #07b68c !important;
+    border-radius: .5rem;
+}
+
+.setupPlan{
+    color: #07b68c;
+    font-weight: bold;
+}
+
+#mat-tab-label-1-2 {
+    border-right: none;
+}
+
+.bs-stepper-header {
+    float: left;
+}
+
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 46px;
+    height: 22px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 1px;
+    right:1px;
+    bottom: 2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #05b68b;
+  }
+  
+ 
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 20px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+
+  .PreviewTextHead{
+    font-weight: bold;
+    background: -webkit-linear-gradient(#489dce, #07b58c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 70px;
+    margin-bottom: -10px;
+    text-align: left;
+  }
+  
+  .subTextPreview{
+    background: -webkit-linear-gradient(#489dce, #07b58c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 22px !important;
+    text-align: left;
+  }
+
+  .regTerms input[type='checkbox']:after {
+    width: 18px;
+    height: 18px;
+    border-radius: 15px;
+    top: -3px;
+    left: -2px;
+    position: relative;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid #23aba9;
+    background-color: #fff;
+}
+
+.regTerms input[type='checkbox']:checked:after {
+    width: 18px;
+    height: 18px;
+    border-radius: 15px;
+    top: -3px;
+    left: -2px;
+    position: relative;
+    background-color: #23aba9;
+    border: 2px solid #23aba9;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+}

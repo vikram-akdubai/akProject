@@ -18,6 +18,22 @@
     font-weight: 500;
 }
 
+.form-check-input {
+  margin-top: 0.4rem;
+  margin-left: -0.25rem;
+}
+
+.headText{
+  font-weight: 700 !important;
+  line-height: 3rem;
+  font-weight: bold;
+  font-size: 2.5rem;
+  background: -webkit-linear-gradient(45deg, #4c9bd3, #07b58d 30%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 0 !important;
+}
+
 .btn-change:hover{
     -webkit-transform: scale(1.1);
     color: #fff;
@@ -74,10 +90,11 @@
   border-right: none;
   border-left: none;
   display: block;
+  color: #424242;
   width: 100%;
   height: 30px;
   padding: 0;
-  color: #cacaca;
+
   border-radius: 0px;
 }
   .form-control::-webkit-input-placeholder {
@@ -151,9 +168,8 @@
 }
 
 
-
-#stepper1 {
-    width: 85%;
+select.mdb-select.md-form.form-control.ng-untouched.ng-pristine.ng-invalid {
+  height: 1.9rem;
 }
 
 .card .form-group .form-control {
@@ -172,6 +188,7 @@ button.close {
   border: 0;
   padding: 0px !important;
 }
+
 
 .modal-content {
   padding: 2%;
@@ -212,6 +229,44 @@ padding-left: .4rem;
   padding: .5rem 1.5rem;
   margin-right: 2rem;
 }
+
+.PreviewTextHead{
+  font-weight: bold;
+  background: -webkit-linear-gradient(#489dce, #07b58c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 70px;
+  margin-bottom: -10px;
+  text-align: left;
+}
+
+.subTextPreview{
+  background: -webkit-linear-gradient(#489dce, #07b58c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 22px !important;
+  text-align: left;
+}
+
+button.btn.btn-primary.profileButton {
+  border: 1px solid #1aae9f !important;
+  background: none;
+  color: #1aae9f;
+  border-radius: 1rem;
+}
+
+.regTick{
+  text-align: left;
+}
+
+button.btn.btn-primary.profileButton:hover {
+  color: #fff;
+  background-image: none;
+  background: linear-gradient(to top, rgb(5, 182, 138) 0%, rgb(59, 162, 193) 99%, rgb(59, 162, 193) 100%);
+  border: 1px solid #1aae9f !important;
+  border-radius: 1rem;
+}
+
 
 @media (min-width: 576px){
 .modal-dialog {

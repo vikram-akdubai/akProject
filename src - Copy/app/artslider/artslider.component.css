@@ -1,0 +1,220 @@
+.container {
+    max-height: 100vh;
+    position: relative;
+    max-width: 100vw;
+    margin-bottom: 10rem;
+    margin-top: 2rem;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.carousel-indicators{bottom:-10%;}
+.carousel-indicators li{background-color: #11b196;}
+
+
+.slider_text{
+    padding-left: 1rem;
+    padding-top: 10rem;
+    padding-right: 6rem;
+}
+
+.slider_headone{
+    margin-bottom: 2rem;
+    position: relative;
+    animation: myfirst 5s 2;
+    animation-direction: alternate;
+}
+@keyframes myfirst {
+    0%   {right: 10%; top: 0px;}
+    15%  {right: 0%; top: 0px;}
+
+}    
+
+.slider_headtwo{
+    width:25.5rem;
+    margin-bottom: 2rem; position: relative;
+    animation: headtwo 5s 2;
+    animation-direction: alternate;
+}
+@keyframes headtwo {
+    0%   {right: 10%; top: 0px;}
+    25%  {right: 0%; top: 0px;}
+}    
+
+.slider_buttons{
+    width:31rem;
+    margin-bottom: 2rem; position: relative;
+    animation: buttons 5s 2;
+    animation-direction: alternate;
+}
+@keyframes buttons {
+    0%   {right: 10%; top: 0px;}
+    35%  {right: 0%; top: 0px;}
+}    
+
+.slider_three{
+    width:15.5rem;margin-bottom: 2rem; position: relative;
+    animation: buttons 5s 2;
+    animation-direction: alternate;
+}
+@keyframes buttons {
+    0%   {right: 10%; top: 0px;}
+    45%  {right: 0%; top: 0px;}
+}    
+
+.hidehead_sub{
+    display:none;
+}
+
+.mobilebanner{
+    display: none;
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1283px){
+.container{
+    max-width: 100vw;
+    margin-bottom: 4rem;
+}
+
+.mobileview {
+    margin-top: 5%;
+}
+
+.slider_text{
+    padding-left: 2rem;
+    padding-top: 5rem;
+    padding-right: 1rem;
+}
+
+.slider_headone {
+    margin-bottom: 2rem;
+}
+
+.slider_headtwo{
+    width: 80%;
+    margin-bottom: 2rem;
+}
+
+.slider_buttons{
+    width: 86%;
+    margin-bottom: 2rem;
+}
+
+.slider_three[_ngcontent-npo-c108] {
+    width: 42%;
+    margin-bottom: 0rem;
+}
+
+}
+@media screen and (max-width: 767px){
+
+.mobilebanner{
+    display: inline;
+}
+
+.webbanner{
+    display: none;
+}
+
+.container{max-height: 100vh; margin-top:2%; margin-bottom: 15rem; max-width: 100vw;}
+
+.slider_text{
+    padding: 2rem;
+    margin-top: 78%;
+}
+
+.mobileview {
+    position: fixed;
+    top: -26%;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    margin-left: 1rem;
+    }
+
+.slider_headtwo{
+    width: 75%;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    animation-direction: alternate;
+}
+@keyframes headtwo {
+    0%   {right: 0%; top: 10%;}
+    25%  {right: 0%; top: 0%;}
+} 
+
+.slider_three {
+    width: 30%;
+    margin: 0 auto;
+}
+
+.slider_buttons {
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    animation: buttons 5s 2;
+    animation-direction: alternate;
+}
+@keyframes buttons {
+    0%   {right: 0%; top: 10%;}
+    35%  {right: 0%; top: 0%;}
+} 
+
+.slider_headone{
+    margin-bottom: 2rem;
+    animation: myfirst 5s 2;
+    animation-direction: alternate;
+}
+@keyframes myfirst {
+    0%   {right: 0; top: 10%;}
+    15%  {right: 0; top: 0%;}
+
+} 
+
+.hidehead{
+    display: block;
+    position: fixed;
+    top: 3%;
+    width: 50%;
+    left: 25%;
+}
+
+.hidehead_sub{
+    display:block;
+}
+
+.drslidermobile{
+    padding: 2rem;
+    margin-top: 94%;
+}
+
+.slider2image{
+    position: fixed;
+    top: 5%;
+    width: 100%;
+    padding: 0;
+    margin-left: 1rem;
+    height: 70%;
+}
+
+.slider3image{
+    position: fixed;
+    top: -8%;
+    width: 100%;
+    padding: 0;
+    margin-left: 1rem;
+    height: 100%;
+}
+.slider4image{
+    position: fixed;
+    top: 2%;
+    width: 80%;
+    padding: 0;
+    left: 5%;
+    height: 80%;
+}
+
+.carousel-indicators{
+    bottom: -5%;
+}
+
+}

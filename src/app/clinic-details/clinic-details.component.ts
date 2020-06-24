@@ -120,22 +120,6 @@ name = 'Angular 4';
   submittedClinic = false;
 
   ngOnInit(){
-
-    this.apiService.countryClinicApi().subscribe((data)=>{
-      console.log(data);
-      this.countryClinic = data['response'];
-    });
-
-    this.apiService.getState().subscribe((data)=>{
-      console.log(data);
-      this.state = data['response'];
-    });
-
-    this.apiService.getCity().subscribe((data)=>{
-      console.log(data);
-      this.city = data['response'];
-    });
-
     this.apiService.getTreatmnentList().subscribe((data)=>{
       console.log(data);
       this.treatmentClinic = data['response'];

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {HomecontainerComponent} from './homecontainer/homecontainer.component';
+import { AuthGuard } from './_guards';
 
 
 const routes: Routes = [
@@ -31,11 +32,17 @@ const routes: Routes = [
   { path: 'career', loadChildren: () => import('./career/career.module').then(m => m.CareerModule) },
   { path: 'joinnow', loadChildren: () => import('./joinnow/joinnow.module').then(m => m.JoinnowModule) },
   { path: 'doctorreg', loadChildren: () => import('./doctorreg/doctorreg.module').then(m => m.DoctorregModule) },
-  { path: 'docprofile', loadChildren: () => import('./docprofile/docprofile.module').then(m => m.DocprofileModule) },
+  { path: 'docprofile', loadChildren: () => import('./docprofile/docprofile.module').then(m => m.DocprofileModule), canActivate: [AuthGuard] },
   { path: 'blog4', loadChildren: () => import('./blog4/blog4.module').then(m => m.Blog4Module) },
   { path: 'covidguideline', loadChildren: () => import('./covidguideline/covidguideline.module').then(m => m.CovidguidelineModule) },
   { path: 'clinicDetails', loadChildren: () => import('./clinic-details/clinic-details.module').then(m => m.ClinicDetailsModule) },
-  { path: 'contactus', loadChildren: () => import('./contactus/contactus.module').then(m => m.ContactusModule) }
+  { path: 'contactus', loadChildren: () => import('./contactus/contactus.module').then(m => m.ContactusModule) },
+  { path: 'news', loadChildren: () => import('./news/news.module').then(m => m.NewsModule) },
+  { path: 'drlisting', loadChildren: () => import('./drlisting/drlisting.module').then(m => m.DrlistingModule) },
+  { path: 'skincancerblog', loadChildren: () => import('./skincancerblog/skincancerblog.module').then(m => m.SkincancerblogModule) },
+  { path: 'healthblog', loadChildren: () => import('./healthblog/healthblog.module').then(m => m.HealthblogModule) },
+  { path: 'menstruation', loadChildren: () => import('./menstruation/menstruation.module').then(m => m.MenstruationModule) },
+  { path: 'artiintel', loadChildren: () => import('./artiintel/artiintel.module').then(m => m.ArtiintelModule) }
 ];
 
 @NgModule({

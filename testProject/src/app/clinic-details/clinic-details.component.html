@@ -1,0 +1,679 @@
+<div class="container">
+    <div class="row">
+        <div class="col-2">
+            <form [formGroup]="registrationForm" (ngSubmit)="onSubmit1()">
+				<div class="group-gap">
+					<!-- Upload image -->
+					<div class="avatar-upload">
+						<div class="avatar-edit">
+							<input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" #fileInput (change)="uploadFile($event)" />
+                        </div>
+                        <div class="avatar-preview">
+                            <div id="imagePreview" [style.backgroundImage]="'url('+ imageUrl +')'">
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+          <button type="submit" class="btn btn-primary" (click)="fileInput.click()" style="margin-left: 2rem;">Upload Image</button>
+        </form>                                  
+        </div>
+        <div class="col-8">
+            <div class="media-body">
+                <div class="personal_text">
+                    <h3>View profile / Add Clinic Details</h3>
+                </div>
+            </div>  
+        </div>
+        <div class="col-2">  
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-10 cliniccontainer">
+            <div class="row">
+                <div class="col-12 docprofileabout">
+                    <div class="row" style="border-bottom: 1px solid #e6e6e6; margin: 1rem 0rem; padding-bottom: .5rem;">
+                        <div class="col-1" style="padding: 0px;">
+                            <svg width="29" height="31" viewBox="0 0 29 31">
+                                <image id="Group_1" data-name="Group 1" width="29" height="31" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAfCAYAAAAbW8YEAAAET0lEQVRIiY2XTWhcVRTHz0knaKqYClUqqIxWJIugWSi4cBGkSqxCx1K0bRSycdOFuCyuXEjqwkVxYaXQEgSTKaYStQ2lSInoouKigfqRhYUxFMyiYCqtVhrPT+59986772Myvgfz3rsf53/POf/zv3d04sQlwd3qf0XCu2WtyyhP+q/Qn/flbaaW9Pn2by4deHFcelwND6QZmNSAI7yOcjZdWBGQMuBLCG/2AnRXQ4T81pp35SbCegL3EcrBfIzN/jD5/KFocGxu8abzfLNrIA1bBVwDTKHNtiLMoIyZmHtuTQ3mkdoMVEp3OWx1beo974RnwWAI8aagjapn6d3N3XGUF8L3doQPEvLsG5tbHA9ROY+y2M/TRv/w+uf9JrRRzgW2dkL7jIkthXETpoyEFPTzVCqAFiaWvlcQlkr57iwf2N1xhkZPfdlEGHHz7H97Wu9hJI/7PYwyFXI248hkytQT7TNToX8HyoqFef1zWsfYSJ6s9QjCA2HEWwjNzB+aKGbCh2He72g2rg9ojdoUvPct3yfF3yowWmz1p9f2LESDj3823+qfU2WhojbxTXmkpDZR9vYjjKHmiHMxNRhGjj46316I+Y38iCXnwrsH4R2Ev60a5qfL+TW12aDJzqAj1s8paDC8jtqSFeb55xBq07FOjyFMB7WJnr3viENJ0BFcLZ6Pnv/y6itS9NR7dhXhHMrhJH1/od656YFkJQezFdIxoYWyowyYhzgPdflK7Ln5rWBvPdPrbF4jd9033BNWOrApo5NSqoC6peX9zs62zG4+v5EYdCEeCp6dRLlqNUC55/UikNS2C/HJMO/PYD8DTZK9inJHEspb1U26rFJV0MSem99J5v0T5zYSQ0dM7GuUGwj7UJZ7AfXPqe9/zIT3UOYR7kbYhTJnoWRikbvnRYRrpvZyDdBzKA+XcibN07Oxf3V17xsXijXPLdyGIGxH2UU4paRb21mUZwPMdx48Yaupl7+dKFcQBlHbbcIiym3EdppyRUQuJCeoa6i300rs50QKxl3RDyZerFU0Su2ECUdRtiH8gTL5297J9Yc+/+RthPEikVgLJ4z4fbtLpCQ/n1q2fTkCPGPCRDF/lgpk9z1Roa44hO9R1No+ZcqdftvLNghppPkh82LNxNpJWAsySEGdLFWhUskEORTe9due8HEe3pwwlxPZcqG5kS6oRke7JZMyOSGeq4I1lKNh7OU8vHlODyFsSYB+rSuVUmS6KlReAMJK1O7Q9m9ep3lOvzX1q9tA7UHL6qqQ03KIrcbTLqTyFIKre6dMDV+rijvSyEBp5ftRxi0LSyWn1a2vCJTnt8Dg8WC3KyVpTq+jnEk82uhFnrIM1uUXkY2gRMuo/9NyPS4v5nQ4/lEqkWcLyl1upzBlMNuEfY0OB0oN3/fFcQc05Gr83q+OuT433tn9EZGmA+z+T3LzFNGRU6fptYP0Ik+dBhcOct3Q15ynReQ/WPxgUlYciCQAAAAASUVORK5CYII="/>
+                            </svg>
+                        </div>
+                        <div class="col-3 " style="margin-left: -4rem; padding: 0; padding-top: .4rem; font-weight: 600;">Add Clinic Details</div>
+                    </div>
+                    <form [formGroup]="clinicForm" (ngSubmit)="onSubmitClinic()">
+                    <div class="card" style="border:none; margin-bottom: 2rem;">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <input placeholder="Add Clinic Name" type="text" formControlName="clinicName" class="form-control" [ngClass]="{ 'is-invalid': submittedClinic && f.clinicName.errors }" />
+                                        <div *ngIf="submittedClinic && f.clinicName.errors" class="invalid-feedback">
+                                            <div *ngIf="f.clinicName.errors.required">Please Enter Clinic Name</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <input placeholder="Address Line 1" type="text" formControlName="addressOne" class="form-control" [ngClass]="{ 'is-invalid': submittedClinic && f.addressOne.errors }" />
+                                            <div *ngIf="submittedClinic && f.addressOne.errors" class="invalid-feedback">
+                                                <div *ngIf="f.addressOne.errors.required">Please Enter Clinic Address</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="Address2" placeholder="Address Line 2"/>   
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <select formControlName="clinicCountry" [ngClass]="{ 'is-invalid': submittedClinic && f.clinicCountry.errors }" class="form-control">
+                                                <option value="" selected disabled>Country</option>
+                                                <option  *ngFor="let country of countryClinic;">{{country.name}}</option>
+                                            </select>
+                                            <div *ngIf="submittedClinic && f.clinicCountry.errors" class="invalid-feedback">
+                                                <div *ngIf="f.clinicCountry.errors.required">Please Select Country</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <select formControlName="clinicState" [ngClass]="{ 'is-invalid': submittedClinic && f.clinicState.errors }" class="form-control">
+                                                <option value="" selected disabled>Select State</option>
+                                                <option *ngFor="let states of state;">{{states.name}}</option>
+                                            </select>
+                                            <div *ngIf="submittedClinic && f.clinicState.errors" class="invalid-feedback">
+                                                <div *ngIf="f.clinicState.errors.required">Please Select State</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <select formControlName="clinicCity" [ngClass]="{ 'is-invalid': submittedClinic && f.clinicCity.errors }" class="form-control">
+                                                <option value="" selected disabled>Select City</option>
+                                                <option *ngFor="let cities of city;">{{cities.name}}</option>
+                                            </select>
+                                            <div *ngIf="submittedClinic && f.clinicCity.errors" class="invalid-feedback">
+                                                <div *ngIf="f.clinicCity.errors.required">Please Select City</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Postal Code"/>   
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Contact No"/>   
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Website"/>   
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary">Save</button>
+                            </div>
+                        </div>
+                    </div>
+                    </form>
+                    <div class="card locationupload">
+                        <svg width="301" height="156" viewBox="0 0 301 156">
+                            <image id="Group_87" data-name="Group 87" width="301" height="156" xlink:href="data:img/png;base64,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"/>
+                        </svg>                      
+                    </div>
+                    <div class="card" style="margin-top:1rem; border-radius: 1rem; padding:1rem;">
+                        <div>
+                            <div class="imageupload" *ngFor='let url of urls'>
+                                <img [src]="url">
+                            </div>
+                        </div>
+                        <div class="upload-btn-wrapper">
+                            <button class="btn">Add Clinic Photo +</button>
+                            <input type='file' (change)="onSelectFile($event)" multiple>
+                        </div>
+                    </div>
+                    <div class="card" style="margin-top:4rem; border-radius: 1rem; padding:1rem;">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-group" style="margin-bottom:0px;">
+                                    <angular2-multiselect [data]="itemList" 
+                                    [(ngModel)]="selectedItems" 
+                                    [settings]="settings" 
+                                    (onSelect)="onItemSelect($event)"
+                                    (onDeSelect)="OnItemDeSelect($event)" 
+                                    (onSelectAll)="onSelectAll($event)" 
+                                    (onDeSelectAll)="onDeSelectAll($event)">
+                                    </angular2-multiselect>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" style="margin-top:2rem; border-radius: 1rem; padding:1rem;">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-group" style="margin-bottom:0px;">
+                                    <angular2-multiselect [data]="treatmentClinic"
+                                    [(ngModel)]="selectedTreatment" 
+                                    [settings]="settingsTreatment" 
+                                    (onSelect)="onItemSelect($event)"
+                                    (onDeSelect)="OnItemDeSelect($event)" 
+                                    (onSelectAll)="onSelectAll($event)" 
+                                    (onDeSelectAll)="onDeSelectAll($event)">
+                                    </angular2-multiselect>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" style="margin-top:2rem; border-top: 0px;border-radius: 1rem; padding-bottom:1rem;">
+                        <div class="row details_clinic">
+                            <div class="col-12">Clinic Working Hours</div>
+                        </div>
+                        <div class="card" style="margin:1rem; border:none;">
+                            <div id="accordion">
+                                <div class="card" style="margin:1rem; border-radius: 1rem;">
+                                  <div class="card-header" id="headingOne">
+                                    <h5 class="mb-0">
+                                      <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Everyday
+                                      </button>
+                                    </h5>
+                                  </div>
+                                  <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                                    <div class="card-body">
+                                        <div class="form-inline">
+                                            <div class="col-2 form-check mb-4 mr-sm-4">
+                                                <input class="form-check-input" type="checkbox" id="inlineFormCheck">&nbsp;&nbsp;
+                                                <label class="form-check-label" for="inlineFormCheck">Morning&nbsp;&nbsp;</label>
+                                            </div>
+                                            <div class=" col-3 form-check mb-4 mr-sm-4">
+                                                <igx-time-picker ></igx-time-picker>
+                                            </div>
+                                            <div class=" col-1 form-check mb-4 mr-sm-4">to</div>
+                                            <div class=" col-3 form-check mb-4 mr-sm-4">
+                                                <igx-time-picker ></igx-time-picker>
+                                            </div>
+                                        </div>
+                                        <div class="form-inline">
+                                            <div class="col-2 form-check mb-4 mr-sm-4">
+                                                <input class="form-check-input" type="checkbox" id="inlineFormCheck">&nbsp;&nbsp;
+                                                <label class="form-check-label" for="inlineFormCheck">Afternoon</label>
+                                            </div>
+                                            <div class=" col-3 form-check mb-4 mr-sm-4">
+                                                <igx-time-picker ></igx-time-picker>
+                                            </div>
+                                            <div class=" col-1 form-check mb-4 mr-sm-4">to</div>
+                                            <div class=" col-3 form-check mb-4 mr-sm-4">
+                                                <igx-time-picker ></igx-time-picker>
+                                            </div>
+                                        </div>
+                                        <div class="form-inline">
+                                            <div class="col-2 form-check mb-4 mr-sm-4">
+                                                <input class="form-check-input" type="checkbox" id="inlineFormCheck">&nbsp;&nbsp;&nbsp;
+                                                <label class="form-check-label" for="inlineFormCheck">Evening&nbsp;&nbsp;&nbsp;</label>
+                                            </div>
+                                            <div class=" col-3 form-check mb-4 mr-sm-4">
+                                                <igx-time-picker ></igx-time-picker>
+                                            </div>
+                                            <div class=" col-1 form-check mb-4 mr-sm-4">to</div>
+                                            <div class=" col-3 form-check mb-4 mr-sm-4">
+                                                <igx-time-picker ></igx-time-picker>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="card" style="margin:1rem; border-radius: 1rem;">
+                                    <div class="card-header" id="headingTwo">
+                                        <h5 class="mb-0">
+                                            <button [disabled]="!enableTxtBoxTwo" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                Sunday
+                                              </button>
+                                          </h5>
+                                          
+                                          <div class="custom-control custom-switch">
+                                            <input type="checkbox" class="custom-control-input" id="customSwitch1"name="enableTxtBoxTwo" [(ngModel)]="enableTxtBoxTwo">
+                                            <label class="custom-control-label" for="customSwitch1"></label>
+                                          </div>
+                
+                                          <div class="custom-control custom-switch" *ngIf="enableTxtBoxTwo==false" style="margin-right:1rem; line-height:20px;">Holiday</div>
+                                          <div class="custom-control custom-switch" *ngIf="enableTxtBoxTwo==true" style="margin-right:1rem; line-height:20px;">Work Day</div>
+                                    </div>
+                                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                                      <div class="card-body">
+                                          <div class="form-inline">
+                                              <div class="col-2 form-check mb-4 mr-sm-4">
+                                                  <input class="form-check-input" type="checkbox" id="inlineFormCheck">&nbsp;&nbsp;
+                                                  <label class="form-check-label" for="inlineFormCheck">Morning&nbsp;&nbsp;</label>
+                                              </div>
+                                              <div class=" col-3 form-check mb-4 mr-sm-4">
+                                                <igx-time-picker ></igx-time-picker>
+                                              </div>
+                                              <div class=" col-1 form-check mb-4 mr-sm-4">to</div>
+                                              <div class=" col-3 form-check mb-4 mr-sm-4">
+                                                <igx-time-picker ></igx-time-picker>
+                                              </div>
+                                          </div>
+                                          <div class="form-inline">
+                                              <div class="col-2 form-check mb-4 mr-sm-4">
+                                                  <input class="form-check-input" type="checkbox" id="inlineFormCheck">&nbsp;&nbsp;
+                                                  <label class="form-check-label" for="inlineFormCheck">Afternoon</label>
+                                              </div>
+                                              <div class=" col-3 form-check mb-4 mr-sm-4">
+                                                <igx-time-picker ></igx-time-picker>
+                                              </div>
+                                              <div class=" col-1 form-check mb-4 mr-sm-4">to</div>
+                                              <div class=" col-3 form-check mb-4 mr-sm-4">
+                                                <igx-time-picker ></igx-time-picker>
+                                              </div>
+                                          </div>
+                                          <div class="form-inline">
+                                              <div class="col-2 form-check mb-4 mr-sm-4">
+                                                  <input class="form-check-input" type="checkbox" id="inlineFormCheck">&nbsp;&nbsp;&nbsp;
+                                                  <label class="form-check-label" for="inlineFormCheck">Evening&nbsp;&nbsp;&nbsp;</label>
+                                              </div>
+                                              <div class=" col-3 form-check mb-4 mr-sm-4">
+                                                <igx-time-picker ></igx-time-picker>
+                                              </div>
+                                              <div class=" col-1 form-check mb-4 mr-sm-4">to</div>
+                                              <div class=" col-3 form-check mb-4 mr-sm-4">
+                                                <igx-time-picker ></igx-time-picker>
+                                              </div>
+                                          </div>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="card" style="margin:1rem; border-radius: 1rem;">
+                                    <div class="card-header" id="headingThree">
+                                        <h5 class="mb-0">
+                                            <button [disabled]="!enableTxtBoxThree" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                Monday
+                                              </button>
+                                          </h5>
+                                          <div class="custom-control custom-switch">
+                                            <input type="checkbox" class="custom-control-input" id="customSwitch2"name="enableTxtBoxThree" [(ngModel)]="enableTxtBoxThree">
+                                            <label class="custom-control-label" for="customSwitch2"></label>
+                                          </div>
+                                          <div class="custom-control custom-switch" *ngIf="enableTxtBoxThree==false" style="margin-right:1rem; line-height:20px;">Holiday</div>
+                                          <div class="custom-control custom-switch" *ngIf="enableTxtBoxThree==true" style="margin-right:1rem; line-height:20px;">Work Day</div>
+                                    </div>
+                                    <div id="collapseThree" class="collapse" aria-labelledby="headingthree" data-parent="#accordion">
+                                      <div class="card-body">
+                                          <div class="form-inline">
+                                              <div class="col-2 form-check mb-4 mr-sm-4">
+                                                  <input class="form-check-input" type="checkbox" id="inlineFormCheck">&nbsp;&nbsp;
+                                                  <label class="form-check-label" for="inlineFormCheck">Morning&nbsp;&nbsp;</label>
+                                              </div>
+                                              <div class=" col-3 form-check mb-4 mr-sm-4">
+                                                <igx-time-picker ></igx-time-picker>
+                                              </div>
+                                              <div class=" col-1 form-check mb-4 mr-sm-4">to</div>
+                                              <div class=" col-3 form-check mb-4 mr-sm-4">
+                                                <igx-time-picker ></igx-time-picker>
+                                              </div>
+                                          </div>
+                                          <div class="form-inline">
+                                              <div class="col-2 form-check mb-4 mr-sm-4">
+                                                  <input class="form-check-input" type="checkbox" id="inlineFormCheck">&nbsp;&nbsp;
+                                                  <label class="form-check-label" for="inlineFormCheck">Afternoon</label>
+                                              </div>
+                                              <div class=" col-3 form-check mb-4 mr-sm-4">
+                                                <igx-time-picker ></igx-time-picker>
+                                              </div>
+                                              <div class=" col-1 form-check mb-4 mr-sm-4">to</div>
+                                              <div class=" col-3 form-check mb-4 mr-sm-4">
+                                                <igx-time-picker ></igx-time-picker>
+                                              </div>
+                                          </div>
+                                          <div class="form-inline">
+                                              <div class="col-2 form-check mb-4 mr-sm-4">
+                                                  <input class="form-check-input" type="checkbox" id="inlineFormCheck">&nbsp;&nbsp;&nbsp;
+                                                  <label class="form-check-label" for="inlineFormCheck">Evening&nbsp;&nbsp;&nbsp;</label>
+                                              </div>
+                                              <div class=" col-3 form-check mb-4 mr-sm-4">
+                                                <igx-time-picker ></igx-time-picker>
+                                              </div>
+                                              <div class=" col-1 form-check mb-4 mr-sm-4">to</div>
+                                              <div class=" col-3 form-check mb-4 mr-sm-4">
+                                                <igx-time-picker ></igx-time-picker>
+                                              </div>
+                                          </div>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="card" style="margin:1rem; border-radius: 1rem;">
+                                    <div class="card-header" id="headingFour">
+                                        <h5 class="mb-0">
+                                            <button [disabled]="!enableTxtBoxFour" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                                Tuesday
+                                              </button>
+                                          </h5>
+                                          <div class="custom-control custom-switch">
+                                            <input type="checkbox" class="custom-control-input" id="customSwitch3"name="enableTxtBoxFour" [(ngModel)]="enableTxtBoxFour">
+                                            <label class="custom-control-label" for="customSwitch3"></label>
+                                          </div>
+                                          <div class="custom-control custom-switch" *ngIf="enableTxtBoxFour==false" style="margin-right:1rem; line-height:20px;">Holiday</div>
+                                          <div class="custom-control custom-switch" *ngIf="enableTxtBoxFour==true" style="margin-right:1rem; line-height:20px;">Work Day</div>
+                                    </div>
+                                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                                      <div class="card-body">
+                                          <div class="form-inline">
+                                              <div class="col-2 form-check mb-4 mr-sm-4">
+                                                  <input class="form-check-input" type="checkbox" id="inlineFormCheck">&nbsp;&nbsp;
+                                                  <label class="form-check-label" for="inlineFormCheck">Morning&nbsp;&nbsp;</label>
+                                              </div>
+                                              <div class=" col-3 form-check mb-4 mr-sm-4">
+                                                <igx-time-picker ></igx-time-picker>
+                                              </div>
+                                              <div class=" col-1 form-check mb-4 mr-sm-4">to</div>
+                                              <div class=" col-3 form-check mb-4 mr-sm-4">
+                                                <igx-time-picker ></igx-time-picker>
+                                              </div>
+                                          </div>
+                                          <div class="form-inline">
+                                              <div class="col-2 form-check mb-4 mr-sm-4">
+                                                  <input class="form-check-input" type="checkbox" id="inlineFormCheck">&nbsp;&nbsp;
+                                                  <label class="form-check-label" for="inlineFormCheck">Afternoon</label>
+                                              </div>
+                                              <div class=" col-3 form-check mb-4 mr-sm-4">
+                                                <igx-time-picker ></igx-time-picker>
+                                              </div>
+                                              <div class=" col-1 form-check mb-4 mr-sm-4">to</div>
+                                              <div class=" col-3 form-check mb-4 mr-sm-4">
+                                                <igx-time-picker ></igx-time-picker>
+                                              </div>
+                                          </div>
+                                          <div class="form-inline">
+                                              <div class="col-2 form-check mb-4 mr-sm-4">
+                                                  <input class="form-check-input" type="checkbox" id="inlineFormCheck">&nbsp;&nbsp;&nbsp;
+                                                  <label class="form-check-label" for="inlineFormCheck">Evening&nbsp;&nbsp;&nbsp;</label>
+                                              </div>
+                                              <div class=" col-3 form-check mb-4 mr-sm-4">
+                                                <igx-time-picker ></igx-time-picker>
+                                              </div>
+                                              <div class=" col-1 form-check mb-4 mr-sm-4">to</div>
+                                              <div class=" col-3 form-check mb-4 mr-sm-4">
+                                                <igx-time-picker ></igx-time-picker>
+                                              </div>
+                                          </div>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="card" style="margin:1rem; border-radius: 1rem;">
+                                    <div class="card-header" id="headingFive">
+                                        <h5 class="mb-0">
+                                            <button [disabled]="!enableTxtBoxFive" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                                Wednesday
+                                              </button>
+                                          </h5>
+                                          <div class="custom-control custom-switch">
+                                            <input type="checkbox" class="custom-control-input" id="customSwitch4"name="enableTxtBoxFive" [(ngModel)]="enableTxtBoxFive">
+                                            <label class="custom-control-label" for="customSwitch4"></label>
+                                          </div>
+                                          <div class="custom-control custom-switch" *ngIf="enableTxtBoxFive==false" style="margin-right:1rem; line-height:20px;">Holiday</div>
+                                          <div class="custom-control custom-switch" *ngIf="enableTxtBoxFive==true" style="margin-right:1rem; line-height:20px;">Work Day</div>
+                                    </div>
+                                    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+                                      <div class="card-body">
+                                          <div class="form-inline">
+                                              <div class="col-2 form-check mb-4 mr-sm-4">
+                                                  <input class="form-check-input" type="checkbox" id="inlineFormCheck">&nbsp;&nbsp;
+                                                  <label class="form-check-label" for="inlineFormCheck">Morning&nbsp;&nbsp;</label>
+                                              </div>
+                                              <div class=" col-3 form-check mb-4 mr-sm-4">
+                                                <igx-time-picker ></igx-time-picker>
+                                              </div>
+                                              <div class=" col-1 form-check mb-4 mr-sm-4">to</div>
+                                              <div class=" col-3 form-check mb-4 mr-sm-4">
+                                                <igx-time-picker ></igx-time-picker>
+                                              </div>
+                                          </div>
+                                          <div class="form-inline">
+                                              <div class="col-2 form-check mb-4 mr-sm-4">
+                                                  <input class="form-check-input" type="checkbox" id="inlineFormCheck">&nbsp;&nbsp;
+                                                  <label class="form-check-label" for="inlineFormCheck">Afternoon</label>
+                                              </div>
+                                              <div class=" col-3 form-check mb-4 mr-sm-4">
+                                                <igx-time-picker ></igx-time-picker>
+                                              </div>
+                                              <div class=" col-1 form-check mb-4 mr-sm-4">to</div>
+                                              <div class=" col-3 form-check mb-4 mr-sm-4">
+                                                <igx-time-picker ></igx-time-picker>
+                                              </div>
+                                          </div>
+                                          <div class="form-inline">
+                                              <div class="col-2 form-check mb-4 mr-sm-4">
+                                                  <input class="form-check-input" type="checkbox" id="inlineFormCheck">&nbsp;&nbsp;&nbsp;
+                                                  <label class="form-check-label" for="inlineFormCheck">Evening&nbsp;&nbsp;&nbsp;</label>
+                                              </div>
+                                              <div class=" col-3 form-check mb-4 mr-sm-4">
+                                                <igx-time-picker ></igx-time-picker>
+                                              </div>
+                                              <div class=" col-1 form-check mb-4 mr-sm-4">to</div>
+                                              <div class=" col-3 form-check mb-4 mr-sm-4">
+                                                <igx-time-picker ></igx-time-picker>
+                                              </div>
+                                          </div>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="card" style="margin:1rem; border-radius: 1rem;">
+                                    <div class="card-header" id="headingSix">
+                                        <h5 class="mb-0">
+                                            <button [disabled]="!enableTxtBoxSix" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                                Thursday
+                                              </button>
+                                          </h5>
+                                          <div class="custom-control custom-switch">
+                                            <input type="checkbox" class="custom-control-input" id="customSwitch4"name="enableTxtBoxSix" [(ngModel)]="enableTxtBoxSix">
+                                            <label class="custom-control-label" for="customSwitch4"></label>
+                                          </div>
+                                          <div class="custom-control custom-switch" *ngIf="enableTxtBoxSix==false" style="margin-right:1rem; line-height:20px;">Holiday</div>
+                                          <div class="custom-control custom-switch" *ngIf="enableTxtBoxSix==true" style="margin-right:1rem; line-height:20px;">Work Day</div>
+                                    </div>
+                                    <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
+                                      <div class="card-body">
+                                          <div class="form-inline">
+                                              <div class="col-2 form-check mb-4 mr-sm-4">
+                                                  <input class="form-check-input" type="checkbox" id="inlineFormCheck">&nbsp;&nbsp;
+                                                  <label class="form-check-label" for="inlineFormCheck">Morning&nbsp;&nbsp;</label>
+                                              </div>
+                                              <div class=" col-3 form-check mb-4 mr-sm-4">
+                                                <igx-time-picker ></igx-time-picker>
+                                              </div>
+                                              <div class=" col-1 form-check mb-4 mr-sm-4">to</div>
+                                              <div class=" col-3 form-check mb-4 mr-sm-4">
+                                                <igx-time-picker ></igx-time-picker>
+                                              </div>
+                                          </div>
+                                          <div class="form-inline">
+                                              <div class="col-2 form-check mb-4 mr-sm-4">
+                                                  <input class="form-check-input" type="checkbox" id="inlineFormCheck">&nbsp;&nbsp;
+                                                  <label class="form-check-label" for="inlineFormCheck">Afternoon</label>
+                                              </div>
+                                              <div class=" col-3 form-check mb-4 mr-sm-4">
+                                                <igx-time-picker ></igx-time-picker>
+                                              </div>
+                                              <div class=" col-1 form-check mb-4 mr-sm-4">to</div>
+                                              <div class=" col-3 form-check mb-4 mr-sm-4">
+                                                <igx-time-picker ></igx-time-picker>
+                                              </div>
+                                          </div>
+                                          <div class="form-inline">
+                                              <div class="col-2 form-check mb-4 mr-sm-4">
+                                                  <input class="form-check-input" type="checkbox" id="inlineFormCheck">&nbsp;&nbsp;&nbsp;
+                                                  <label class="form-check-label" for="inlineFormCheck">Evening&nbsp;&nbsp;&nbsp;</label>
+                                              </div>
+                                              <div class=" col-3 form-check mb-4 mr-sm-4">
+                                                <igx-time-picker ></igx-time-picker>
+                                              </div>
+                                              <div class=" col-1 form-check mb-4 mr-sm-4">to</div>
+                                              <div class=" col-3 form-check mb-4 mr-sm-4">
+                                                <igx-time-picker ></igx-time-picker>
+                                              </div>
+                                          </div>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="card" style="margin:1rem; border-radius: 1rem;">
+                                    <div class="card-header" id="headingSeven">
+                                        <h5 class="mb-0">
+                                            <button [disabled]="!enableTxtBoxSeven" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                                Friday
+                                              </button>
+                                          </h5>
+                                          <div class="custom-control custom-switch">
+                                            <input type="checkbox" class="custom-control-input" id="customSwitch5"name="enableTxtBoxSeven" [(ngModel)]="enableTxtBoxSeven">
+                                            <label class="custom-control-label" for="customSwitch5"></label>
+                                          </div>
+                                          <div class="custom-control custom-switch" *ngIf="enableTxtBoxSeven==false" style="margin-right:1rem; line-height:20px;">Holiday</div>
+                                          <div class="custom-control custom-switch" *ngIf="enableTxtBoxSeven==true" style="margin-right:1rem; line-height:20px;">Work Day</div>
+                                    </div>
+                                    <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordion">
+                                      <div class="card-body">
+                                          <div class="form-inline">
+                                              <div class="col-2 form-check mb-4 mr-sm-4">
+                                                  <input class="form-check-input" type="checkbox" id="inlineFormCheck">&nbsp;&nbsp;
+                                                  <label class="form-check-label" for="inlineFormCheck">Morning&nbsp;&nbsp;</label>
+                                              </div>
+                                              <div class=" col-3 form-check mb-4 mr-sm-4">
+                                                <igx-time-picker ></igx-time-picker>
+                                              </div>
+                                              <div class=" col-1 form-check mb-4 mr-sm-4">to</div>
+                                              <div class=" col-3 form-check mb-4 mr-sm-4">
+                                                <igx-time-picker ></igx-time-picker>
+                                              </div>
+                                          </div>
+                                          <div class="form-inline">
+                                              <div class="col-2 form-check mb-4 mr-sm-4">
+                                                  <input class="form-check-input" type="checkbox" id="inlineFormCheck">&nbsp;&nbsp;
+                                                  <label class="form-check-label" for="inlineFormCheck">Afternoon</label>
+                                              </div>
+                                              <div class=" col-3 form-check mb-4 mr-sm-4">
+                                                <igx-time-picker ></igx-time-picker>
+                                              </div>
+                                              <div class=" col-1 form-check mb-4 mr-sm-4">to</div>
+                                              <div class=" col-3 form-check mb-4 mr-sm-4">
+                                                <igx-time-picker ></igx-time-picker>
+                                              </div>
+                                          </div>
+                                          <div class="form-inline">
+                                              <div class="col-2 form-check mb-4 mr-sm-4">
+                                                  <input class="form-check-input" type="checkbox" id="inlineFormCheck">&nbsp;&nbsp;&nbsp;
+                                                  <label class="form-check-label" for="inlineFormCheck">Evening&nbsp;&nbsp;&nbsp;</label>
+                                              </div>
+                                              <div class=" col-3 form-check mb-4 mr-sm-4">
+                                                <igx-time-picker ></igx-time-picker>
+                                              </div>
+                                              <div class=" col-1 form-check mb-4 mr-sm-4">to</div>
+                                              <div class=" col-3 form-check mb-4 mr-sm-4">
+                                                <igx-time-picker ></igx-time-picker>
+                                              </div>
+                                          </div>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="card" style="margin:1rem; border-radius: 1rem;">
+                                    <div class="card-header" id="headingEight">
+                                      <h5 class="mb-0">
+                                        <button [disabled]="!enableTxtBoxEight" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                                            Saturday
+                                          </button>
+                                      </h5>
+
+                                      <div class="custom-control custom-switch">
+                                        <input type="checkbox" class="custom-control-input" id="customSwitch6"name="enableTxtBoxEight" [(ngModel)]="enableTxtBoxEight">
+                                        <label class="custom-control-label" for="customSwitch6"></label>
+                                      </div>
+                                      <div class="custom-control custom-switch" *ngIf="enableTxtBoxEight==false" style="margin-right:1rem; line-height:20px;">Holiday</div>
+                                      <div class="custom-control custom-switch" *ngIf="enableTxtBoxEight==true" style="margin-right:1rem; line-height:20px;">Work Day</div>
+                                      
+                                      </div>
+                                    <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordion">
+                                      <div class="card-body">
+                                          <div class="form-inline">
+                                              <div class="col-2 form-check mb-4 mr-sm-4">
+                                                  <input class="form-check-input" type="checkbox" id="inlineFormCheck">&nbsp;&nbsp;
+                                                  <label class="form-check-label" for="inlineFormCheck">Morning&nbsp;&nbsp;</label>
+                                              </div>
+                                              <div class=" col-3 form-check mb-4 mr-sm-4">
+                                                <igx-time-picker ></igx-time-picker>
+                                              </div>
+                                              <div class=" col-1 form-check mb-4 mr-sm-4">to</div>
+                                              <div class=" col-3 form-check mb-4 mr-sm-4">
+                                                <igx-time-picker ></igx-time-picker>
+                                              </div>
+                                          </div>
+                                          <div class="form-inline">
+                                              <div class="col-2 form-check mb-4 mr-sm-4">
+                                                  <input class="form-check-input" type="checkbox" id="inlineFormCheck">&nbsp;&nbsp;
+                                                  <label class="form-check-label" for="inlineFormCheck">Afternoon</label>
+                                              </div>
+                                              <div class=" col-3 form-check mb-4 mr-sm-4">
+                                                <igx-time-picker ></igx-time-picker>
+                                              </div>
+                                              <div class=" col-1 form-check mb-4 mr-sm-4">to</div>
+                                              <div class=" col-3 form-check mb-4 mr-sm-4">
+                                                <igx-time-picker ></igx-time-picker>
+                                              </div>
+                                          </div>
+                                          <div class="form-inline">
+                                              <div class="col-2 form-check mb-4 mr-sm-4">
+                                                  <input class="form-check-input" type="checkbox" id="inlineFormCheck">&nbsp;&nbsp;&nbsp;
+                                                  <label class="form-check-label" for="inlineFormCheck">Evening&nbsp;&nbsp;&nbsp;</label>
+                                              </div>
+                                              <div class=" col-3 form-check mb-4 mr-sm-4">
+                                                <igx-time-picker ></igx-time-picker>
+                                              </div>
+                                              <div class=" col-1 form-check mb-4 mr-sm-4">to</div>
+                                              <div class=" col-3 form-check mb-4 mr-sm-4">
+                                                <igx-time-picker ></igx-time-picker>
+                                              </div>
+                                          </div>
+                                      </div>
+                                    </div>
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+                    <div class="card" style="margin-top:2rem; border-radius: 1rem; padding:1rem;">
+                        <div class="row">
+                            <div class="col-10">
+                                <span style="color:#27a9ad; line-height: 40px;">Set Appointment Duration</span>
+                            </div>
+                            <div class="col-2">
+                                <div class="form-group" style="margin-bottom:0px;" >
+                                    <select style="border: 1px solid #d6d6d6!important; border-radius: 1rem;" class="form-control" name="speciality" placeholder="">
+                                        <option value="" selected disabled>Mins</option>
+                                        <option value="signleclick">15</option>
+                                        <option value="signleclick">30</option>
+                                        <option value="signleclick">45</option>
+                                        <option value="signleclick">60</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-10"></div>
+                        <div class="col-2">
+                            <button type="button" expand="block" data-toggle="modal" data-target="#aboutme" class="btn btn-primary" style="float: right; margin-top: 1rem;">save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

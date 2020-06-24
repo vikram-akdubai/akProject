@@ -1,0 +1,128 @@
+.coronabanner {
+    width: 1623px;
+    margin: 0 auto;
+}
+
+h4{
+	font-size: 35px;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+    background: -webkit-linear-gradient(#489dce, #07b58c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.col-10.searchBar{
+    border: 1px solid #05b68b;
+    border-radius: 2rem;
+    padding: 0;
+    line-height: 44px;
+}
+
+.bnner_container a{
+	color: #fff;
+}
+
+.searchIcon {
+    float: left;
+	padding: 0rem 1rem;
+	width:15%;
+}
+
+.searchInput{
+	float:right;
+	width:85%;
+	margin-top: .2rem;
+	padding-right: 2rem;
+}
+
+.searchFilterbutton {
+    float: left;
+    width: 20%;
+}
+
+.buttonbg{
+    background-image: none;
+	background: linear-gradient(to top, rgb(5, 182, 138) 0%, rgb(59, 162, 193) 99%, rgb(59, 162, 193) 100%);
+	color: #fff;
+	text-align: center;
+	border-radius: 2rem;
+}
+
+.searchInput select.form-control {
+    border: 0;
+    font-size: 16px;
+    color: #d1d1d1;
+}
+
+.clear{
+	clear: both;
+}
+
+a {
+    color: #fff;
+}
+
+.clinicListView{
+    border: 2px solid #e6e6e6;
+    border-radius: 2rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.clinicListView:hover{
+    border: 2px solid #07b68c;
+}
+
+.clinicListView:active{
+    border: 2px solid #07b68c;
+}
+
+.personal_text {
+    padding-top: 4%;
+}
+
+.list {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.personal_text .basic_info li {
+    margin-bottom: 0%;
+    float: left;
+    margin-right: 10%;
+    margin-top: 0%;
+    padding: 1rem 1rem;
+}
+.personal_text .basic_info li a {
+    position: relative;
+    padding-left: 40px;
+    font-size: 16px;
+    color: #777777;
+}
+
+.personal_text .basic_info li a i {
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #766dff;
+}
+
+.dayLight{
+    padding-left: 5rem !important;
+}
+
+button.btn.btn-primary.profileButton {
+    width: 100%;
+    border-radius: 2rem;
+}
+
+.doctorDetailssec {
+padding: 2rem 0rem;
+border: 1px solid #05b68b;
+margin: 2rem 0rem;
+border-radius: 1rem;
+}

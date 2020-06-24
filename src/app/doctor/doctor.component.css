@@ -1,6 +1,7 @@
+
 .container{max-width: 100%; padding: 0px;}
 .midcard{
-    margin: 2rem 10rem;
+    margin: 2rem 0rem;
 }
 
 .card {
@@ -15,7 +16,7 @@ h5.card-title {
     font-weight: bold;
 }
 .row {
-    margin: 8rem 0rem;
+    margin: 6rem 0rem;
 }
 
 button.btn.btn-primary.onchageimage{
@@ -28,6 +29,10 @@ button.btn.btn-primary.onchageimage{
     font-weight: bold;
     margin-bottom: 4.5rem;
     width: 100%;
+}
+
+video {
+    width: 100% !important;
 }
 
 .row.iphonesec {
@@ -100,6 +105,41 @@ i.fa.fa-lock {
 }
 
 
+.headText {
+    font-weight: bolder;
+    background: -webkit-linear-gradient(#4c9bd3, #05b68b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.svg_text {
+    margin-top: 10rem;
+}
+
+.drPageButtom{
+    padding: .90rem 6rem;
+    border-radius: 1rem;
+    margin-top: 4rem;
+}
+
+p.svg_contant {
+    margin-bottom: 10rem !important;
+}
+
+.healh_edu{
+    font-size: 20px !important; 
+    margin-top: 5rem !important;
+ }
+
+ .mobile_device_image{
+     display: none;
+ }
+
+ .mobile_list{
+    margin: 3rem 5rem;
+}
+ 
+
 @media screen and (max-width: 767px) {
     .mobileScreenadjust{
         margin-top:0rem;
@@ -168,5 +208,54 @@ i.fa.fa-lock {
     .ownerData{
         width: 90%;
         display: none;
+    }
+
+    .mobile_layout{
+        margin: .5rem 0rem;
+        height: 350px;
+    }
+    .mobile_none{
+        display: none;
+    }
+
+    h2.headText {
+        text-align: center;
+        font-size: 30px;
+        line-height: 30px;
+    }
+
+    p.svg_contant{
+        margin-bottom: 2rem !important;
+        text-align: left;
+        margin-top: 2rem !important;
+    }
+
+    .svg_contant{
+        text-align: left;
+    }
+
+    .drPageButtom{
+        margin-top: 1rem !important;
+    margin: 0rem 3rem;
+    }
+
+    .mobile_device_image{
+        display: inline;  
+    }
+
+    .web_device_image{
+        display: none;
+    }
+    .col-12.col-md-6.mobile_device_image.aos-init.aos-animate {
+        padding: 0;
+    }
+    
+    .svg_text {
+        margin-top: 2rem;
+    }
+
+    .mobile_list{
+        text-align: left;
+        margin: 2rem 0rem;
     }
 }

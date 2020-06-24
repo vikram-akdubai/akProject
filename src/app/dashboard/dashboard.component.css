@@ -16,6 +16,10 @@
     margin: 4rem 5rem;
 }
 
+video {
+    width: 100% !important;
+}
+
 .card-title{
     background: -webkit-linear-gradient(45deg, #4c9bd3, #07b58d 60%);
     -webkit-background-clip: text;
@@ -130,10 +134,15 @@ button.btn.btn-primary.onchageimage{
     margin-top: 8rem;
 }
 
-.iphonesec{
-    display: none;
-}
+@media screen and (max-width: 720px) {
+    .iphonesec{
+        display: none;
+    }
 
+    .card {
+        margin: 0rem 1rem !important;
+    }
+}
 
 @media screen and (max-width: 1023px) {
     .midcard{
@@ -232,11 +241,7 @@ button.btn.btn-primary.onchageimage{
     }
 
     .mobile_device{
-        display: none !important;
-    }
-
-    .iphonesec{
-        display: none;
+        display: inline !important;
     }
 
     .card-header{
@@ -265,3 +270,163 @@ button.btn.btn-primary.onchageimage{
     }
 
 }
+
+/* animation css here*/
+
+body { cursor: ns-resize }
+.intro-section {
+  text-align: center;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-section {
+  --scroll-length: 5.2;
+  height: calc( var(--scroll-length) * 100vh );
+  width: 100%;
+
+  .content .subheading, 
+  .content .paragraph {
+    opacity: 1; 
+    opacity: calc( 2 + var(--viewport-y) );
+  }
+ 
+}
+
+.figure {
+  width: 100%;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.content {
+  position: absolute;
+  top: 0;
+  left: 200px;
+  width: 22%;
+  height: 70%;
+  max-width: 35em;
+  display: grid;
+  grid-template-rows: 1fr;
+  color: white;
+  padding: 0em;
+  font-size: 2.5vmin;
+
+  * {
+    text-shadow: 0 0 4vmin rgba(black, 0.25);
+  }
+
+  > .header {
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  > .paragraph {
+    grid-row: 1;
+    line-height: 1.5;
+  }
+} 
+
+.heading {
+  font-size: 2.75em;
+  margin: 0;
+}
+
+.subheading {
+  font-size: 1.25em;
+  font-weight: 600;
+  margin-bottom: .5em;
+}
+
+/* ---------------------------------- */
+
+.figure {
+  --scale: calc(.8 + 
+    (.2 * var(--scroll-length) * var(--visible-y))
+  );
+  position: sticky;
+  top: 0;
+  left: 0;
+  margin: 0;
+  will-change: transform;
+  transform: scale(var(--scale));
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(black, 1);
+    opacity: calc( var(--visible-y) );
+  }
+}
+
+/* ---------------------------------- */
+
+.char {
+  display: inline-block;
+  opacity: calc( 
+    1 + ( 
+      ( var(--viewport-y) * 1.5 )
+      - var(--char-percent)
+    )
+  );
+}
+
+
+*,
+*:before,
+*:after {
+  position: relative;
+  box-sizing: border-box;
+}
+
+.heading,
+.intro-heading {
+  font-weight: 700;
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  line-height: 1.05;
+  font-weight: 400;
+  letter-spacing: -.015em;
+}
+
+#content-section {
+    padding: 10px;
+    position: relative;
+}
+
+.figure {
+    max-height: 800px;
+    overflow: auto;
+}
+
+.content{
+    position: absolute !important;
+    top: 0px !important;
+    left: 202px !important;
+    width: 21% !important;
+}
+
+body::-webkit-scrollbar {
+    width: 1em;
+  }
+   
+  body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }

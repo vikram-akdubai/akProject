@@ -9,6 +9,8 @@ import { Title, Meta } from '@angular/platform-browser';
 export class DoctorComponent implements OnInit {
   title = 'HI Doctors- Grow Online Presence, Grow Network and Manage Practice for Free';
 
+ 
+
   constructor(private titleService: Title, private metaService: Meta) {}
 
   ngOnInit() {
@@ -19,5 +21,7 @@ export class DoctorComponent implements OnInit {
       {name: 'robots', content: 'index, follow'}
     ]);
   }
+
+  
 
 }

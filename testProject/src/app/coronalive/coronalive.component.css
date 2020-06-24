@@ -1,0 +1,80 @@
+.container{max-width: 100%; padding: 0px;}a{color: #328dcc;}.logo{width: 5%;}.navbar-dark .navbar-nav .nav-link{text-transform: uppercase; font-weight: 500; background: linear-gradient(to top, rgb(5, 182, 138) 0%, rgb(59, 162, 193) 99%, rgb(59, 162, 193) 100%);-webkit-background-clip: text;-webkit-text-fill-color: transparent;}.bg-dark{background-color: #ffffff !important;}a.nav-link{margin-left: 62px !important;}.bg-primary{background-color: #fff!important;}.navbar-collapse{flex-grow: 0 !important;}.nav-pills .nav-link.active, .nav-pills .show>.nav-link{color: #fff; background-image: none; background: -webkit-linear-gradient(bottom, rgb(5, 182, 138) 0%, rgb(59, 162, 193) 99%, rgb(59, 162, 193) 100%); background: -o-linear-gradient(bottom, rgb(5, 182, 138) 0%, rgb(59, 162, 193) 99%, rgb(59, 162, 193) 100%); background: -ms-linear-gradient(bottom, rgb(5, 182, 138) 0%, rgb(59, 162, 193) 99%, rgb(59, 162, 193) 100%); background: -moz-linear-gradient(bottom, rgb(5, 182, 138) 0%, rgb(59, 162, 193) 99%, rgb(59, 162, 193) 100%); background: linear-gradient(to top, rgb(5, 182, 138) 0%, rgb(59, 162, 193) 99%, rgb(59, 162, 193) 100%);}.nav-pills .nav-link{border-radius: 4rem;}.nav-link{padding: .5rem 2rem;}.coronaBcg{background: url('/assets/images/coronabg.png'); background-repeat: no-repeat; margin: 0 auto; width: 100%; height: 100%; padding-top: 18%; padding-bottom: 3.5%;}.card-body{text-align: center; line-height: 2;}.bg-dark{background-color: transparent !important; color: #fff; border: 1px solid #fff; border-radius: 1rem;}
+
+.tabledata{
+    width:84%;
+    margin: 0 auto;
+}
+
+.table {
+    border: 1px solid #d6d6d6;
+}
+
+.table td, .table th {
+    border-right: 1px solid #dee2e6;
+}
+
+.table th {
+    color: #1aaea0;
+}
+
+.tabletexthead{
+    width: 50%;
+    margin-bottom: 2rem;
+}
+
+.tablemidtext{
+    width: 70%;
+    margin-bottom: 2rem;
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1023px){
+
+.coronaBcg{
+    background: none;
+    background-color: rgb(5, 182, 138);
+    padding:5%;
+}
+
+.col-sm-2 {
+    margin-bottom: 6%;
+}
+
+    }
+
+@media screen and (max-width: 767px){
+
+.coronaBcg {
+    background: none;
+    background-color: rgb(5, 182, 138);
+    padding:5%;
+}
+
+.col-sm-2 {
+    margin-bottom: 6%;
+}
+
+.tabledata{
+    width: 100%;
+}
+
+.tabletexthead{
+    width: 100%;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+}
+
+.tablemidtext{
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+    }
+
+span.counter {
+    font-weight: bolder;
+}
+
+span.date_style {
+    font-size: 14px;
+    font-weight: normal;
+}

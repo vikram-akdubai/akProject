@@ -1,0 +1,83 @@
+.login_body {
+	background: url(/assets/images/loginbg.png);
+	background-repeat: no-repeat;
+    margin: 0 auto;
+    background-position: center center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.row {
+	display: flex; 
+    background-color: #fff;
+    width: 30%;
+    position: absolute;
+    box-shadow: 0px 0px 42px -20px #2dcbff;
+    border-radius: 1rem;
+    margin: 0 auto;
+    height: 45%;
+    top: 26%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.form {
+	padding: 2rem;
+}
+
+.flex-sb-m {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	justify-content: space-between;
+	-ms-align-items: center;
+	align-items: center;
+}
+
+.label-checkbox100 {
+	font-size: 13px;
+	text-transform: uppercase;
+	font-weight: 500;
+	background: linear-gradient(to top, rgb(5, 182, 138) 0%, rgb(59, 162, 193) 99%, rgb(59, 162, 193) 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	line-height: 1.4;
+	display: block;
+	position: relative;
+	cursor: pointer;
+}
+
+.txt3 {
+	font-size: 13px;
+	line-height: 1.4;
+	text-transform: uppercase;
+	font-weight: 500;
+	background: linear-gradient(to top, rgb(5, 182, 138) 0%, rgb(59, 162, 193) 99%, rgb(59, 162, 193) 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.svg_text {
+	width: 25%;
+	padding-bottom: 2rem;
+}
+
+.btn-primary {
+	color: #fff;
+	background-image: none;
+	background: -webkit-linear-gradient(bottom, rgb(5, 182, 138) 0%, rgb(59, 162, 193) 99%, rgb(59, 162, 193) 100%);
+	background: -o-linear-gradient(bottom, rgb(5, 182, 138) 0%, rgb(59, 162, 193) 99%, rgb(59, 162, 193) 100%);
+	background: -ms-linear-gradient(bottom, rgb(5, 182, 138) 0%, rgb(59, 162, 193) 99%, rgb(59, 162, 193) 100%);
+	background: -moz-linear-gradient(bottom, rgb(5, 182, 138) 0%, rgb(59, 162, 193) 99%, rgb(59, 162, 193) 100%);
+	background: linear-gradient(to top, rgb(5, 182, 138) 0%, rgb(59, 162, 193) 99%, rgb(59, 162, 193) 100%);
+	border: 0px;
+}
+
+.btn {
+	padding: 0.375rem 2.75rem;
+	border-radius: 1.25rem;
+}

@@ -6,6 +6,8 @@ import { DoctorregRoutingModule } from './doctorreg-routing.module';
 import { DoctorregComponent } from './doctorreg.component';
 import { NgbDate, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {DatePipe} from '@angular/common';
+import { NgpSortModule } from 'ngp-sort-pipe';
+
 
 
 
@@ -17,7 +19,8 @@ import {DatePipe} from '@angular/common';
     DoctorregRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    NgbModule
+    NgbModule,
+    NgpSortModule
   ],
   providers: [
     DatePipe

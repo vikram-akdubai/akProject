@@ -18,6 +18,13 @@ import { IgxTimePickerModule } from 'igniteui-angular';
 import { HttpModule } from '@angular/http';
 import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
 import {DatePipe} from '@angular/common';
+import {MatTabsModule} from '@angular/material/tabs';
+import { AuthGuard, PermissionGuard, UsersEditGuard, VendorGuard, CustomerGuard, SubscriptionsGuard, UsersGuard, SubscriptionsEditGuard, CompanyGuard } from './_guards';
+import { AuthenticationService, HttpService, UtilityService } from './_services';
+import { WINDOW_PROVIDERS } from './_providers/window.provider';
+import { ToastrModule } from 'ngx-toastr';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+import { AgmCoreModule } from '@agm/core';
 
 
 @NgModule({
@@ -41,9 +48,37 @@ import {DatePipe} from '@angular/common';
     BrowserAnimationsModule,
     HammerModule,
     IgxTimePickerModule,
-    HttpModule
+    HttpModule,
+    MatTabsModule,
+    MatProgressBarModule,
+    ToastrModule.forRoot({
+      closeButton: true,
+      timeOut: 3000,
+      positionClass: 'toast-top-right',
+      preventDuplicates: true,
+      maxOpened: 0,
+    }),
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyCHCBEkhSUZjV4leD0EKHSlAeGDbWIYEkI',
+      libraries: ['places']
+   })
   ],
-  providers: [DatePipe],
+  providers: [
+    DatePipe,
+    AuthGuard , 
+    PermissionGuard, 
+    UsersEditGuard , 
+    UsersGuard,
+    VendorGuard, 
+    CustomerGuard, 
+    SubscriptionsGuard, 
+    SubscriptionsEditGuard,
+    AuthenticationService, 
+    CompanyGuard,
+    HttpService,
+    WINDOW_PROVIDERS,
+    UtilityService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

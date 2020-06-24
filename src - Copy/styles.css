@@ -1,0 +1,363 @@
+/* Add application styles & imports to this file! */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import '~bs-stepper/dist/css/bs-stepper.min.css';
+
+
+@font-face {
+    font-family: AvenirLTStd-Light;
+    src: url(assets/font/AvenirLTStd-Light.otf) format("opentype");
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'AvenirLTStd-Light' !important;
+  }
+
+  body{
+    font-family: 'AvenirLTStd-Light' !important;
+  }
+
+.dropdown-menu {
+    min-width: 70rem !important;
+    border: none !important;
+    border-radius: 0;
+}
+
+
+ngb-datepicker.dropdown-menu.show.ng-star-inserted {
+    position: relative !important;
+    width:100% !important;
+    height:100% !important;
+    display: block !important;
+    top: 0px;
+    left: 0px;
+    will-change: auto !important;
+    transform: translate(0px, 0px) !important;
+}
+
+.ngb-dp-weekdays {
+    border-bottom: none!important;
+    border-radius: 0!important;
+    background-color: #fff!important;
+    background-color: #FFF!important;
+}
+
+.ngb-dp-day, .ngb-dp-week-number, .ngb-dp-weekday {
+    width: 10rem !important;
+    height: 3rem !important;
+    text-align: center !important;
+}
+
+.btn-light:hover {
+    color: #fff!important;
+    background: rgb(72,157,207);
+    background: linear-gradient(90deg, rgba(72,157,207,1) 0%, rgba(31,172,166,1) 35%, rgba(18,184,146,1) 100%);
+}
+
+.btn-light:not(:disabled):not(.disabled).active, .btn-light:not(:disabled):not(.disabled):active, .show>.btn-light.dropdown-toggle {
+    color: #212529;
+    background: rgb(72,157,207);
+    background: linear-gradient(90deg, rgba(72,157,207,1) 0%, rgba(31,172,166,1) 35%, rgba(18,184,146,1) 100%);
+}
+
+.ngb-dp-week-number, .ngb-dp-weekday {
+    line-height: 4rem !important;
+    text-align: center !important;
+    font-style: italic !important;
+}
+
+ngb-datepicker-navigation-select>.custom-select {
+    margin-right: 1rem !important;
+    border:1px solid rgba(31,172,166,1);
+}
+
+.btn.btn-sm{
+    position: absolute;
+    top: 0;
+}
+
+.ngb-dp-header {
+    border-bottom: 0!important;
+    border-radius: .25rem .25rem 0 0;
+    padding: 8rem!important;
+    background-color: #fff!important;
+    background-color: var(--light);
+    padding-top: 0rem!important;
+    padding-right: 0!important;
+    padding-bottom: 2rem!important;
+}
+
+ngb-datepicker-navigation.ng-star-inserted {
+    width: 10rem;
+    float: right;
+    /* margin-bottom: 10rem; */
+}
+
+.ngb-dp-arrow {
+    display: none !important;
+}
+
+.ngb-dp-months {
+    display: inline !important;
+}
+
+.btn-light.ng-star-inserted {
+    width: 10rem !important;
+}
+
+span#siteseal {
+	display: none;
+}
+
+.top_banneradj{
+	margin-top: 5.5rem;
+}
+
+.btn-primary {
+	color: #fff;
+	background-image: none;
+	background: -webkit-linear-gradient(bottom, rgb(5, 182, 138) 0%, rgb(59, 162, 193) 99%, rgb(59, 162, 193) 100%);
+	background: -o-linear-gradient(bottom, rgb(5, 182, 138) 0%, rgb(59, 162, 193) 99%, rgb(59, 162, 193) 100%);
+	background: -ms-linear-gradient(bottom, rgb(5, 182, 138) 0%, rgb(59, 162, 193) 99%, rgb(59, 162, 193) 100%);
+	background: -moz-linear-gradient(bottom, rgb(5, 182, 138) 0%, rgb(59, 162, 193) 99%, rgb(59, 162, 193) 100%);
+	background: linear-gradient(to top, rgb(5, 182, 138) 0%, rgb(59, 162, 193) 99%, rgb(59, 162, 193) 100%);
+	border: none !important;
+}
+
+.fa, .far, .fas {
+    font-family: Font Awesome\ 5 Free !important;
+}
+
+#mat-tab-label-0-2 {
+    border: none !important;
+}
+
+
+.mat-tab-label {
+    min-width: 470px !important;
+    border-right: 2px solid #e6e6e6;
+}
+
+.mat-tab-labels {
+    box-shadow: 1px 1px 10px 2px #e6e6e6;
+    display: flex;
+    /* border: 1px solid #000; */
+    background: #fff;
+    border-radius: 2rem;
+    margin: 1rem 1rem;
+    padding: .5rem;
+}
+
+.mat-tab-group {
+    display: flex!important;
+    flex-direction: column!important;
+}
+.mat-tab-header {
+    display: flex!important;
+    overflow: hidden!important;
+    position: relative!important;
+    flex-shrink: 0!important;
+}
+
+.mat-tab-label-container {
+    display: flex!important;
+    flex-grow: 1!important;
+    overflow: hidden!important;
+    z-index: 1!important;
+}
+
+.mat-tab-list {
+    flex-grow: 1!important;
+    position: relative!important;
+    transition: transform 500ms cubic-bezier(0.35, 0, 0.25, 1)!important;
+}
+
+.mat-tab-labels {
+    display: flex!important;
+}
+
+.mat-ink-bar {
+    position: absolute!important;
+    bottom: 0!important;
+    height: 2px!important;
+    transition: 500ms cubic-bezier(0.35, 0, 0.25, 1)!important;
+}
+
+.mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar {
+    background-color: #1aae9f!important;
+    width: 440px !important;
+    margin-left: 1.5rem;
+    display:none;
+}
+
+.mat-tab-labels {
+    display: flex!important;
+}
+
+.mat-tab-label:focus:not(.mat-tab-disabled) {
+    opacity: 1;
+    color: #1aae9f;
+    width: 470px;
+    text-align: center;
+    font-weight: 700;
+}
+
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1023px) {
+	.aboutBcg {
+		margin-top: 20%;
+	}
+
+	.top_banneradj{
+		margin-top: 6rem;
+	}
+
+	.news {
+		margin-top: 10%;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.aboutBcg {
+		margin-top: 20%;
+	}
+
+	.top_banneradj{
+		margin-top: 4rem;
+	}
+
+	.news {
+		margin-top: 10%;
+    }
+    
+    .mt-4,
+	.my-4 {
+        margin-top: 0!important;
+        font-size:26px;
+    }
+
+    .fas {
+        font-family: Font Awesome\ 5 Free !important;
+    }
+}
+
+html,
+body {
+	height: 100% !important;
+}
+
+.igx-typography .igx-typography__h3, .igx-typography h3 {
+    font-weight: 500 !important;
+    font-size: 2rem !important;
+    letter-spacing: 0 !important;
+    text-transform: none !important;
+    line-height: 2rem !important;
+    margin-top: .50rem !important;
+    margin-bottom: 0 !important;
+}
+
+.igx-typography .igx-typography__body-1, .igx-typography p {
+    font-weight: 100 !important;
+    font-size: 1rem !important;
+    letter-spacing: 0.03125rem !important;
+    text-transform: none !important;
+    line-height: 1.75rem !important;
+    margin-top: .50rem !important;
+    margin-bottom: 1rem !important;
+}
+
+.igx-typography .igx-typography__h1, .igx-typography h1 {
+    font-size: 4rem !important;
+    margin-bottom: 1.5rem !important;
+}
+
+.igx-typography h5 {
+    margin-top:0rem !important;
+}
+
+.igx-input-group__bundle {
+	padding-top:0 !important;
+}
+
+.igx-time-picker__header {
+    background-image: none !important;
+    background: linear-gradient(to top, rgb(5, 182, 138) 0%, rgb(59, 162, 193) 99%, rgb(59, 162, 193) 100%)!important;
+    border: none !important;
+}
+
+.igx-time-picker__header-hour {
+    color: #fff !important;
+}
+
+.igx-overlay__wrapper--flex{
+    z-index: 10000 !important;
+}
+
+.igx-time-picker__item--selected {
+    color: #23aba9 !important;
+}
+.igx-time-picker__header-ampm {
+    color: #fff !important;
+}
+.igx-button--flat {
+    color: #23aba9 !important;
+}
+.form-control.is-invalid, .was-validated .form-control:invalid {
+	background-position: right calc(0.675em + .1875rem) center;
+	border-color: #dc3545 !important;
+  }
+
+  .selected-list .c-list .c-token {
+    list-style: none;
+    padding: .6rem 2rem;
+    margin-right: 1rem;
+    margin-top: 0;
+    float: left;
+    position: relative;
+    background-image: none ;
+    background: linear-gradient(to top, rgb(5, 182, 138) 0%, rgb(59, 162, 193) 99%, rgb(59, 162, 193) 100%);
+    border: none ;
+    color: #ffff;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.pure-checkbox input[type=checkbox]+label:before {
+    box-sizing: content-box;
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    margin-top: -9px;
+    text-align: center;
+    transition: .4s;
+    border-radius: 3px;
+    background: #e6e6e6;
+}
+
+i.fas.fa-calendar-alt.fa-fw {
+    font-size: 24px;
+    color: #1aae9f;
+}
+
+i.fas.fa-calendar-alt.fa-fw:hover {
+    font-size: 24px;
+    color: #1aae9f;
+}
+
+.cuppa-dropdown {
+    position: relative;
+    border-bottom: 1px solid #ced4da;
+}
+
+.dropdown-menu .show .ng-star-inserted {
+    position: fixed !important;
+    width: 500px !important;
+    height: 400px !important;
+    display: block!important;
+}
+

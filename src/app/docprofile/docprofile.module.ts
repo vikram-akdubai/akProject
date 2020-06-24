@@ -8,7 +8,14 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
 import { AngularMultiSelectModule } from 'angular2-multiselect-dropdown';
 import { HammerModule } from "@angular/platform-browser";
-import { IgxTimePickerModule } from 'igniteui-angular';
+import { IgxTimePickerModule, IgxInputGroupModule, IgxIconModule } from 'igniteui-angular';
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule, MatRippleModule} from '@angular/material/core';
+import { AgmCoreModule } from '@agm/core';
+
+
+
 
 @NgModule({
   declarations: [DocprofileComponent],
@@ -21,7 +28,14 @@ import { IgxTimePickerModule } from 'igniteui-angular';
     NgMultiSelectDropDownModule,
     AngularMultiSelectModule,
     HammerModule,
-    IgxTimePickerModule
+    IgxTimePickerModule,
+    MatTabsModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    IgxTimePickerModule,
+    IgxInputGroupModule,
+    IgxIconModule,
+    AgmCoreModule
   ]
 })
 export class DocprofileModule { }

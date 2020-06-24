@@ -25,15 +25,24 @@
               <li class="nav-item">
                   <a class="nav-link" routerLinkActive="active" routerLinkActiveOptions="{exact:true}" href="#blog" [routerLink] = "'/blog'" data-toggle="collapse" data-target=".navbar-collapse.show">Blog</a>
               </li>
+              <li class="nav-item" *ngIf="!isLogin" >
+                <a class="nav-link" routerLinkActive="active" routerLinkActiveOptions="{exact:true}" href="#login" [routerLink] = "'/login'" data-toggle="collapse" data-target=".navbar-collapse.show">Login</a>
+            </li>
+            <li class="nav-item" *ngIf="isLogin" >
+              <a class="nav-link" routerLinkActive="active" routerLinkActiveOptions="{exact:true}" href="#login" [routerLink] = "'/login'" data-toggle="collapse" data-target=".navbar-collapse.show">Logout</a>
+            </li>
               <li class="nav-item">
-                  <a class="nav-link" routerLinkActive="active" routerLinkActiveOptions="{exact:true}" href="#login" [routerLink] = "'/login'" data-toggle="collapse" data-target=".navbar-collapse.show">Login</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" routerLinkActive="active" routerLinkActiveOptions="{exact:true}" href="#joinnow" [routerLink] = "'/joinnow'" data-toggle="collapse" data-target=".navbar-collapse.show">Join Now</a>
+                  <a class="nav-link" style="pointer-events: none;" routerLinkActive="active" routerLinkActiveOptions="{exact:true}" href="#joinnow" [routerLink] = "'/joinnow'" data-toggle="collapse" data-target=".navbar-collapse.show">Join Now</a>
               </li>
           </ul>
       </div>
   </div>
 </nav>
+<div *ngIf="loading" class="app-loading">
+    <div class="logo"></div>
+    <svg class="spinner" viewBox="25 25 50 50">
+      <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+    </svg>
+  </div>
 <router-outlet></router-outlet>
 <app-footer></app-footer>
